@@ -1,0 +1,69 @@
+=<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - ParkPrime</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #dcdcdc; /* light gray background */
+            color: #dc3545; /* bootstrap red for all text */
+        }
+        .login-container {
+            margin-top: 100px;
+        }
+        .card {
+            background-color: #f0f0f0; /* slightly darker gray card */
+            border: 1px solid #b0b0b0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .form-label,
+        .text-center,
+        .form-control::placeholder {
+            color: #dc3545; /* red text */
+        }
+        .form-control {
+            border-color: #b0b0b0;
+        }
+        .btn-red {
+            background-color: #dc3545;
+            border: none;
+            color: white;
+        }
+        .btn-red:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+<div class="container login-container d-flex justify-content-center">
+    <div class="card p-4" style="width: 400px;">
+        <h3 class="text-center mb-4">Login</h3>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                <div class="alert alert-{{ category }} alert-dismissible fade show mt-2" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST" action="/login">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" name="username" required placeholder="Enter username" />
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required placeholder="Enter password" />
+            </div>
+            <button type="submit" class="btn btn-red w-100">Login</button>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

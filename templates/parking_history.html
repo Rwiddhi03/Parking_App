@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recent Parking History</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f1f1f1;
+    }
+
+    .top-bar {
+      background-color: #d3d3d3;
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin: 20px;
+    }
+
+    .top-bar a {
+      color: #dc3545;
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: bold;
+    }
+
+    .top-bar a:hover {
+      color: #551017;
+    }
+
+    .edit-profile {
+      color: #ffc107;
+      font-weight: bold;
+    }
+
+    .section {
+      border: 2px solid #6c757d;
+      border-radius: 12px;
+      padding: 15px;
+      margin: 30px auto;
+      background-color: #ffffff;
+      max-width: 900px;
+    }
+
+    .btn-release {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+
+    .btn-parked {
+      background-color: #fff3cd;
+      color: #856404;
+    }
+
+    h5.section-title {
+      color: #6c757d;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar -->
+  <div class="top-bar d-flex justify-content-between align-items-center">
+    <div>
+      <span class="fw-bold text-dark">{{ user }}</span> |
+      <a href="/dashboard">Home</a> |
+      <a href="/history">History</a> |
+      <a href="/logout">Logout</a>
+    </div>
+    <a href="#" class="edit-profile">Edit Profile</a>
+  </div>
+
+  <div class="section">
+    <h5 class="section-title">Recent Parking History</h5>
+    <table class="table table-bordered text-center">
+      <thead class="table-secondary">
+        <tr>
+          <th>ID</th>
+          <th>Location</th>
+          <th>Vehicle No</th>
+          <th>Timestamp</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>120</td>
+          <td>xxxxx</td>
+          <td>TN378888</td>
+          <td>xx-xx-xx</td>
+          <td><button class="btn btn-sm btn-release">Release</button></td>
+        </tr>
+        <tr>
+          <td>142</td>
+          <td>xxxxx</td>
+          <td>AP310421</td>
+          <td>xx-xx-xx</td>
+          <td><button class="btn btn-sm btn-parked">Parked Out</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
