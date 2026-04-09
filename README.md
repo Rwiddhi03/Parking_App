@@ -1,10 +1,10 @@
- ### Smart Parking Management System (Web-Based)
- ## Overview
+ # Smart Parking Management System (Web-Based)
+ # Overview
 
 The Smart Parking Management System is a web-based application designed to efficiently manage parking space allocation across multiple parking lots. The system automates the process of booking, assigning, and releasing parking spots while maintaining a record of past transactions.
 It eliminates manual tracking and ensures optimal utilization of parking resources through dynamic allocation and real-time availability updates.
 
-### Key Features
+# Key Features
 ## Authentication & User Handling
 Generates unique user IDs automatically based on session data
 Ensures each booking is associated with a specific user
